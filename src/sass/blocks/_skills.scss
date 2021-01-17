@@ -1,0 +1,82 @@
+.skills {
+    padding-top: 120px;
+    &__title {
+        position: relative;
+        text-align: center;
+        @include before_circle;
+        &:before {
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__subtitle {
+        text-align: center;
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-template-rows: repeat(2, 270px);
+        grid-auto-rows: repeat(2, 270px);
+        column-gap: 13px;
+        row-gap: 13px;
+        padding: 60px 13px 0 13px;
+    }
+    &__item {
+        position: relative;
+        border: 1px solid #000;
+        padding: 30px 30px 25px 30px;
+        &-icon {
+            img {
+                height: 50px;
+                width: auto;
+            }
+        }
+        &-title {
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+        &-text {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            margin-bottom: 0;
+            margin-top: 15px;
+        }
+    }
+    &__rating {
+        display: grid;
+        grid-template: repeat(2, minmax(70px, auto)) / repeat(2, 500px);
+        column-gap: 90px;
+        row-gap: 35px;
+        padding: 120px 25px 120px 20px;
+        &-item {
+            display: grid;
+            grid-template: minmax(21px, auto) 14px / 200px 35px;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        &-title {
+            position: relative;
+            padding: 2px 0 0 13px;
+            @include before_circle;
+        }
+        &-procentage {
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &-line {
+            height: 15px;
+            width: 500px;
+            background-color: #E8E4DE;
+            border-radius: 4px;
+            span {
+                display: block;
+                height: 100%;
+                border-radius: 4px;
+                background-color:$main-color;
+            }
+        }
+    }
+  
+}
